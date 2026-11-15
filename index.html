@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0f1d3a">
-<title>Rimsha & Zain | Wedding Invitation</title>
+<title>Rimsha & Asad | Wedding Invitation</title>
 <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Pinyon+Script&family=Lato:wght@300;400;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root{--deep:#0f1d3a;--mid:#1d3563;--gold:#d9b977;--acc:#c9a05a;--cream:#fbf7ef;--ink:#262633;--muted:#6c6a78;--line:rgba(30,40,80,.14)}
-*{box-sizing:border-box;margin:0;padding:0}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{font-family:Lato,sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;transition:background .6s}
 body.locked{overflow:hidden;height:100svh}
@@ -23,44 +23,50 @@ h1,h2,h3{font-family:Marcellus,serif;font-weight:400}
 #intro .bis{font:400 1.7rem Amiri,serif;margin-bottom:10px}
 #intro .nm{font-size:clamp(2.8rem,13vw,4rem);color:#d9b977;line-height:1.15}
 #intro small{display:block;letter-spacing:.3em;font-size:.68rem;margin:10px 0 34px;opacity:.85}
-#seal{width:92px;height:92px;border-radius:50%;border:2px solid #e8cf93;color:#fbe9bd;cursor:pointer;
+#seal{width:96px;height:96px;border-radius:50%;border:2px solid #e8cf93;color:#fbe9bd;cursor:pointer;
  background:radial-gradient(circle at 35% 30%,#3a5a9e,#14254a);font:400 1.4rem Marcellus,serif;
  box-shadow:0 10px 30px rgba(0,0,0,.5);animation:beat 1.8s infinite}
 .hint{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;margin-top:22px;opacity:.8}
 @keyframes beat{50%{transform:scale(1.08)}}
 
 /* nav */
-.evbar{position:fixed;top:0;left:0;right:0;z-index:60;display:none;gap:6px;padding:10px 12px;background:rgba(0,0,0,.35);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);overflow-x:auto;scrollbar-width:none}
+.evbar{position:fixed;top:0;left:0;right:0;z-index:60;display:none;gap:8px;padding:max(10px,env(safe-area-inset-top)) 12px 10px;background:rgba(0,0,0,.45);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .evbar::-webkit-scrollbar{display:none}
 .evbar.on{display:flex}
-.evbar button{flex:0 0 auto;border:1px solid rgba(255,255,255,.4);background:transparent;color:#fff;border-radius:99px;padding:7px 14px;font:700 .78rem Lato;cursor:pointer;transition:.3s}
+.evbar button{flex:0 0 auto;border:1px solid rgba(255,255,255,.45);background:transparent;color:#fff;border-radius:99px;padding:9px 16px;min-height:40px;font:700 .8rem Lato;cursor:pointer;transition:.3s}
 .evbar button:first-child{margin-left:auto}.evbar button:last-child{margin-right:auto}
 .evbar button.on{background:var(--gold);color:var(--deep);border-color:var(--gold)}
 
 /* hero */
-.hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:84px 6% 48px;text-align:center;color:#f6ead2;
+.hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:92px 6% 48px;text-align:center;color:#f6ead2;
  background:radial-gradient(circle at 50% 0,var(--mid),var(--deep) 80%);transition:background .6s}
 .greet{font:1.9rem 'Pinyon Script',cursive;color:var(--gold);min-height:1px}
 .hero .eyebrow{color:var(--gold)}
-.arch{width:min(68vw,270px);aspect-ratio:3/4;border-radius:200px 200px 14px 14px;padding:6px;border:2px solid var(--gold);position:relative;animation:float 5s ease-in-out infinite}
-.arch::after{content:"";position:absolute;inset:-11px;border-radius:210px 210px 20px 20px;border:1px dashed var(--gold);opacity:.5}
-.arch>svg,.arch>img{width:100%;height:100%;display:block;border-radius:194px 194px 8px 8px;object-fit:cover;background:var(--deep);transition:opacity .3s}
-@keyframes float{50%{transform:translateY(-10px)}}
+.arch{width:min(78vw,300px);aspect-ratio:3/4;border-radius:200px 200px 14px 14px;padding:6px;border:2px solid var(--gold);position:relative;animation:float 5s ease-in-out infinite}
+.arch::after{content:"";position:absolute;inset:-11px;border-radius:210px 210px 20px 20px;border:1px dashed var(--gold);opacity:.5;pointer-events:none}
+.arch>svg,.arch>.ph{width:100%;height:100%;display:block;border-radius:194px 194px 8px 8px;overflow:hidden;background:var(--deep);transition:opacity .3s}
+.arch>svg{object-fit:cover}
+@keyframes float{50%{transform:translateY(-8px)}}
 .hero h1{font:400 clamp(3.4rem,16vw,6.4rem)/1.05 'Pinyon Script',cursive;color:var(--gold);margin-top:6px}
-.hero p{max-width:460px;line-height:1.85;font-size:.9rem;opacity:.92;font-weight:300}
+.hero p{max-width:460px;line-height:1.85;font-size:.92rem;opacity:.92;font-weight:300}
 .hero p strong{font-weight:700}
 .cl{font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold)}
 .count{display:flex;gap:8px;justify-content:center}
-.count div{background:rgba(255,255,255,.08);border:1px solid var(--gold);border-radius:14px;padding:9px 0;width:64px}
+.count div{background:rgba(255,255,255,.08);border:1px solid var(--gold);border-radius:14px;padding:10px 0;width:66px}
 .count strong{display:block;font:400 1.7rem Marcellus,serif;color:var(--gold)}
 .count span{font-size:.54rem;text-transform:uppercase;letter-spacing:.1em;opacity:.85}
+
+/* photo: poori tasveer + blur background */
+.ph{position:relative;overflow:hidden;background:var(--deep)}
+.ph .bg{position:absolute;inset:-12%;width:124%;height:124%;object-fit:cover;filter:blur(22px) brightness(.75);transform:scale(1.05)}
+.ph .fg{position:relative;width:100%;height:100%;object-fit:contain;display:block}
 
 /* sections */
 .section{max-width:1040px;margin:auto;padding:72px 6%;text-align:center}
 h2{font-size:clamp(2.1rem,7vw,3.2rem);margin:6px 0 24px;color:var(--deep);transition:color .6s}
 .couple{display:flex;justify-content:center;align-items:center;gap:clamp(14px,5vw,48px);flex-wrap:wrap}
 .person h3{font-size:2.1rem;color:var(--deep)}
-.person p{font-size:.82rem;color:var(--muted);line-height:1.7;margin-top:4px}
+.person p{font-size:.86rem;color:var(--muted);line-height:1.7;margin-top:4px}
 .amp{font:3.6rem 'Pinyon Script',cursive;color:var(--acc)}
 .orn{color:var(--acc);letter-spacing:.8em;font-size:.8rem;margin-bottom:8px}
 
@@ -69,22 +75,23 @@ h2{font-size:clamp(2.1rem,7vw,3.2rem);margin:6px 0 24px;color:var(--deep);transi
 .dark h2{color:var(--gold)}
 .dark .eyebrow{color:var(--gold)}
 .tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:22px}
-.tab{border:1px solid var(--gold);background:transparent;border-radius:99px;padding:9px 18px;font:700 .84rem Lato;cursor:pointer;transition:.3s;color:var(--gold)}
+.tab{border:1px solid var(--gold);background:transparent;border-radius:99px;padding:10px 18px;min-height:42px;font:700 .86rem Lato;cursor:pointer;transition:.3s;color:var(--gold)}
 .tab.on{background:var(--gold);color:var(--deep)}
 .panel{background:var(--cream);border-radius:24px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.4);display:grid;grid-template-columns:1fr 1fr;text-align:left;animation:fade .5s}
-.art{background:var(--deep);min-height:300px}
-.art svg,.art img{width:100%;height:100%;display:block;object-fit:cover}
+.art{background:var(--deep);min-height:340px;position:relative}
+.art svg{width:100%;height:100%;display:block;object-fit:cover}
+.art .ph{width:100%;height:100%;min-height:340px}
 .info{padding:28px 24px}
 .info h3{font-size:2.7rem;color:var(--acc);line-height:1}
-.info p{color:var(--muted);line-height:1.8;font-size:.9rem;margin:6px 0 10px}
-.row{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:.86rem;align-items:center;flex-wrap:wrap}
-.row b{min-width:80px}
-.sw i{display:inline-block;width:20px;height:20px;border-radius:50%;margin-right:5px;border:2px solid #fff;box-shadow:0 0 0 1px var(--line)}
+.info p{color:var(--muted);line-height:1.8;font-size:.92rem;margin:6px 0 10px}
+.row{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);font-size:.88rem;align-items:center;flex-wrap:wrap}
+.row b{min-width:84px}
+.sw i{display:inline-block;width:22px;height:22px;border-radius:50%;margin-right:5px;border:2px solid #fff;box-shadow:0 0 0 1px var(--line)}
 .plan{margin:14px 0 2px;border-left:2px solid var(--acc);padding-left:14px;display:grid;gap:8px}
-.plan div{font-size:.84rem;color:var(--muted)}
+.plan div{font-size:.86rem;color:var(--muted)}
 .plan b{color:var(--acc);margin-right:8px}
 .btns{display:flex;gap:10px;flex-wrap:wrap}
-.btn{display:inline-block;margin-top:16px;border:1px solid var(--deep);background:var(--deep);color:#fff;padding:12px 22px;border-radius:99px;cursor:pointer;font:700 .84rem Lato;text-decoration:none;transition:.3s}
+.btn{display:inline-flex;align-items:center;justify-content:center;margin-top:16px;border:1px solid var(--deep);background:var(--deep);color:#fff;padding:13px 22px;min-height:46px;border-radius:99px;cursor:pointer;font:700 .86rem Lato;text-decoration:none;transition:.3s}
 .btn:hover{background:var(--acc);border-color:var(--acc)}
 .btn.o{background:transparent;color:var(--deep)}
 .btn.o:hover{color:#fff}
@@ -92,10 +99,10 @@ h2{font-size:clamp(2.1rem,7vw,3.2rem);margin:6px 0 24px;color:var(--deep);transi
 @keyframes fade{from{opacity:0;transform:translateY(12px)}}
 
 form{max-width:520px;margin:auto;background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;display:grid;gap:12px;text-align:left;box-shadow:0 20px 50px rgba(0,0,0,.08)}
-input,select,textarea{width:100%;border:1px solid var(--line);border-radius:12px;padding:13px;font:inherit;font-size:16px;background:#fffdfb;color:var(--ink)}
+input,select,textarea{width:100%;border:1px solid var(--line);border-radius:12px;padding:14px;font:inherit;font-size:16px;background:#fffdfb;color:var(--ink)}
 input:focus,select:focus,textarea:focus{outline:0;border-color:var(--acc)}
 form .btn{margin-top:4px;width:100%}
-footer{padding:44px 6%;text-align:center;background:var(--deep);color:#f6ead2;font-size:.82rem;transition:background .6s}
+footer{padding:44px 6% calc(44px + env(safe-area-inset-bottom));text-align:center;background:var(--deep);color:#f6ead2;font-size:.82rem;transition:background .6s}
 footer .script{font-size:2.9rem;color:var(--gold)}
 footer .btn{background:var(--gold);color:var(--deep);border-color:var(--gold)}
 
@@ -105,16 +112,24 @@ footer .btn{background:var(--gold);color:var(--deep);border-color:var(--gold)}
 @keyframes fall{to{transform:translateY(110vh) rotate(480deg);opacity:.2}}
 
 @media(max-width:760px){
- .panel{grid-template-columns:1fr}
- .art{min-height:0;aspect-ratio:4/3}
+ .panel{grid-template-columns:1fr;border-radius:20px}
+ .art{min-height:0;aspect-ratio:4/5}
+ .art .ph{min-height:0}
  .section{padding:56px 5%}
- .info{padding:24px 20px}
+ .info{padding:22px 18px 26px}
  .info h3{font-size:2.4rem}
- .count div{width:58px}
+ .count div{width:60px}
  .hintx{display:block}
- .row b{min-width:70px}
+ .row b{min-width:76px}
+ .btns{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+ .btns .btn{width:100%;padding:13px 8px}
+ /* tabs ek line mein swipe */
+ .tabs{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;scrollbar-width:none;margin:0 -5% 18px;padding:0 5% 4px;-webkit-overflow-scrolling:touch}
+ .tabs::-webkit-scrollbar{display:none}
+ .tab{flex:0 0 auto}
+ form{padding:20px 16px;border-radius:18px}
 }
-@media(max-width:360px){.count{gap:5px}.count div{width:52px}}
+@media(max-width:360px){.count{gap:5px}.count div{width:54px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -124,9 +139,9 @@ footer .btn{background:var(--gold);color:var(--deep);border-color:var(--gold)}
 <div id="intro">
   <div>
     <div class="bis">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
-    <div class="nm script">Rimsha &amp; Zain</div>
+    <div class="nm script">Rimsha &amp; Asad</div>
     <small>YOU ARE INVITED · 22 – 25 DEC 2026</small>
-    <button id="seal" aria-label="Open invitation">R♥Z</button>
+    <button id="seal" aria-label="Open invitation">R♥A</button>
     <div class="hint">Tap the seal to open</div>
   </div>
 </div>
@@ -138,7 +153,7 @@ footer .btn{background:var(--gold);color:var(--deep);border-color:var(--gold)}
   <div class="greet" id="greet"></div>
   <div class="eyebrow">Together with our families</div>
   <div class="arch" id="arch"></div>
-  <h1>Rimsha &amp; Zain</h1>
+  <h1>Rimsha &amp; Asad</h1>
   <p>With hearts full of gratitude and joy, we invite you to celebrate the beginning of our forever. Your presence and duas will make our days even more beautiful.</p>
   <p><strong>22 — 25 December 2026</strong> · Karachi</p>
   <div class="cl" id="cl"></div>
@@ -154,7 +169,7 @@ footer .btn{background:var(--gold);color:var(--deep);border-color:var(--gold)}
     <div class="couple">
       <div class="person"><h3>Rimsha</h3><p>Daughter of<br>[Akhter Humaiyun] &amp; [Fozia Siddique]</p></div>
       <div class="amp">&amp;</div>
-      <div class="person"><h3>Zain</h3><p>Son of<br>[Muhammad Amir] &amp; [Laiba Amir]</p></div>
+      <div class="person"><h3>Asad</h3><p>Son of<br>[Muhammad Amir] &amp; [Laiba Amir]</p></div>
     </div>
   </div>
 </section>
@@ -177,8 +192,17 @@ footer .btn{background:var(--gold);color:var(--deep);border-color:var(--gold)}
     <h2>Will you join us?</h2>
     <form id="form">
       <input id="gname" placeholder="Your full name" required autocomplete="name">
-      
-      <select id="ev"><option>All celebrations</option><option>Mehndi</option><option>Mayun</option><option>Nikkah</option><option>Walima</option><option>Not</option></select>
+      <select id="att">
+        <option>Joyfully accepting</option>
+        <option>Regretfully declining</option>
+      </select>
+      <select id="ev">
+        <option>All celebrations</option>
+        <option>Mehndi</option>
+        <option>Mayun</option>
+        <option>Nikkah</option>
+        <option>Walima</option>
+      </select>
       <select id="gn"><option>1 guest</option><option>2 guests</option><option>3 guests</option><option>4+ guests</option></select>
       <textarea id="msg" rows="3" placeholder="Your wishes / duas (optional)"></textarea>
       <button class="btn" type="submit">Send on WhatsApp ♥</button>
@@ -187,7 +211,7 @@ footer .btn{background:var(--gold);color:var(--deep);border-color:var(--gold)}
 </section>
 
 <footer>
-  <div class="script">Rimsha &amp; Zain</div>
+  <div class="script">Rimsha &amp; Asad</div>
   <p style="margin:6px 0 6px">With love and duas</p>
   <button class="btn" id="share">Share this invitation</button>
 </footer>
@@ -195,12 +219,13 @@ footer .btn{background:var(--gold);color:var(--deep);border-color:var(--gold)}
 <script>
 /* ===== YAHAN APNI DETAILS CHANGE KAREN ===== */
 const WHATSAPP = '923001234567';   // country code ke saath, + ke baghair
-const COUPLE = 'Rimsha & Zain';
+const COUPLE = 'Rimsha & Asad';
 
-/* Event-wise couple photos (public image links). If a link fails, the illustrated avatar appears automatically. */
+/* Event-wise couple photos. Agar link/file na chale to illustrated avatar khud aa jata hai.
+   Tip: file ke naam mein spaces ke bajaye simple naam rakhein (jaise mehndi.jpg) */
 const PHOTOS = {
   home: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85',
-  mehndi:'./mehandi 4aa654585fc273552ac93338141ff919.jpg' ,
+  mehndi:'./mehandi 4aa654585fc273552ac93338141ff919.jpg',
   mayun: './mayo.jpg',
   nikkah: './nikkah nama template.jpg',
   walima: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=85'
@@ -287,7 +312,7 @@ const BACK={
   <circle cx="200" cy="150" r="124" fill="none" stroke="${g}" stroke-width="2" opacity=".45"/>
   <circle cx="200" cy="150" r="110" fill="none" stroke="${g}" stroke-width="1.2" stroke-dasharray="2 7" opacity=".7"/>
   ${rot(24,a=>`<circle cx="200" cy="26" r="3" transform="rotate(${a} 200 150)" fill="${g}"/>`)}
-  <text x="200" y="102" text-anchor="middle" fill="${g}" font-family="Pinyon Script,cursive" font-size="46">R &amp; Z</text>
+  <text x="200" y="102" text-anchor="middle" fill="${g}" font-family="Pinyon Script,cursive" font-size="46">R &amp; A</text>
   ${stars([[44,44,8],[356,52,7],[40,252,7],[360,250,8]],g)}`,
  mehndi:g=>`
   <g opacity=".6">
@@ -331,8 +356,13 @@ function scene(k){
 }
 const ART={};
 ['home',...EVENTS.map(e=>e.n.toLowerCase())].forEach(k=>ART[k]=scene(k));
-/* photo ho to photo, warna (ya photo na chale to) avatar */
-const visual=k=>PHOTOS[k]?`<img src="${PHOTOS[k]}" alt="" onerror="this.outerHTML=ART['${k}']">`:ART[k];
+
+/* photo ho to POORI photo (contain) + blur background, warna avatar */
+const visual=k=>{
+  if(!PHOTOS[k])return ART[k];
+  const s=encodeURI(PHOTOS[k]);
+  return `<div class="ph"><img class="bg" src="${s}" alt="" onerror="this.remove()"><img class="fg" src="${s}" alt="Rimsha and Asad" onerror="this.parentNode.outerHTML=ART['${k}']"></div>`;
+};
 const artOf=i=>visual(i<0?'home':EVENTS[i].n.toLowerCase());
 
 /* ===== STATE ===== */
