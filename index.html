@@ -372,7 +372,7 @@ let idx=-1, pi=0;
 const cur=()=>idx<0?DEFAULT:EVENTS[idx].theme;
 
 $('#arch').innerHTML=artOf(-1);
-const to=new URLSearchParams(location.search).get('to');   // card.html?to=Ali%20Khan
+const to=new URLSearchParams(location.search).get('to');   
 if(to){$('#greet').textContent=`Dear ${to},`;$('#gname').value=to}
 
 function petals(n){
